@@ -1,0 +1,14 @@
+version: '3'
+services:
+  hypertest:
+    build: .
+    image: hypertest:latest
+    env_file:
+      - development.env
+    expose:
+      - "80"
+    ports:
+      - "80:80"
+    extra_hosts:
+      - "dockerhost:10.10.10.10"
+
